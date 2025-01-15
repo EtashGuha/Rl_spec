@@ -1,0 +1,12 @@
+python ravi.py \
+    --draft_model_path "meta-llama/Llama-3.2-1B-Instruct" \
+    --target_model_path "meta-llama/Llama-3.2-3B-Instruct" \
+    --dataset_name "openbmb/UltraFeedback" \
+    --text_column "instruction" \
+    --output_dir "outputs/spec_ppo_run1" \
+    --batch_size 1 \
+    --max_epochs 100 \
+    --learning_rate 0 \
+    --max_new_tokens 32 \
+    --max_proposals_per_step 4 \
+    --wandb_project "my-spec-ppo-project"
